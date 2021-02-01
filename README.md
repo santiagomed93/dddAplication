@@ -31,26 +31,26 @@ Here is the list of requirements we are going to use as base:
 
 This is the domain model draft where you can see the main concepts and their relationship
 
-![Domain Model](https://github.corp.globant.com/hector-hurtado/acamica-ddd-course/blob/master/images/domain-model.png)
+![Domain Model](images/domain-model.png)
 
 # Some Behaviors
 
 Here you can see some of the behaviors or actions we can get from the requirements
 
-![Some Actions](https://github.corp.globant.com/hector-hurtado/acamica-ddd-course/blob/master/images/actions.png)
+![Some Actions](images/actions.png)
 
 # Basic Architecture
 
 And finally here you can see a basic architecture of the application and the technology stack used
 
-![Basic Architecture](https://github.corp.globant.com/hector-hurtado/acamica-ddd-course/blob/master/images/architecture.png)
+![Basic Architecture](images/architecture.png)
 
 # How to run the application
 Before you run the application ensure change the email configuration in application.properties
 
 For gmail smtp configuration, you only need to update user and password with your personal email information
 
-![Properties To Change](https://github.corp.globant.com/hector-hurtado/acamica-ddd-course/blob/master/images/email-configuration.png)
+![Properties To Change](images/email-configuration.png)
 
 And after that you need to enable the access to low secure applications in your personal account. Use this **[link](https://myaccount.google.com/lesssecureapps )** to do it.
 

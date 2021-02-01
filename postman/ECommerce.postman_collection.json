@@ -1,0 +1,766 @@
+{
+	"info": {
+		"_postman_id": "3dc51a49-584a-4385-8ff7-0d56e952891a",
+		"name": "ECommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Country",
+			"item": [
+				{
+					"name": "GetAllCountries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/countries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCountry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Uruguay\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/countries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCountryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/countries/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCountryById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/countries/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CountryTax",
+			"item": [
+				{
+					"name": "GetAllCountryTaxes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/taxes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"taxes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCountryTax",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"countryId\":1003,\n\t\"taxType\":\"CUSTOMER\",\n\t\"percentage\":10\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/taxes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"taxes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCountryTaxById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/taxes/country-id/1003/tax-type/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"taxes",
+								"country-id",
+								"1003",
+								"tax-type",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCountryTaxById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/taxes/country-id/1003/tax-type/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"taxes",
+								"country-id",
+								"1003",
+								"tax-type",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCountryTaxPercentage",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"countryId\":1003,\n\t\"taxType\":\"CUSTOMER\",\n\t\"percentage\":19\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/taxes/percentage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"taxes",
+								"percentage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "GetAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Ntebook\",\n\t\"description\":\"A notebook\",\n\t\"price\":10.5,\n\t\"quantityOnStock\":100\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/products/76219939-55a9-4e42-83fd-f31065290ebd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"76219939-55a9-4e42-83fd-f31065290ebd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProductById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/products/76219939-55a9-4e42-83fd-f31065290ebd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"76219939-55a9-4e42-83fd-f31065290ebd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Notebook\",\n\t\"description\":\"A notebook complete description\",\n\t\"price\":1000.123,\n\t\"quantityOnStock\":10000\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/76219939-55a9-4e42-83fd-f31065290ebd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"76219939-55a9-4e42-83fd-f31065290ebd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "CreateCartForCustomer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/carts/customer/1094901480",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carts",
+								"customer",
+								"1094901480"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CheckOutCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"deliveryAddressNotes\":\"Notes\",\n\t\"invoiceAddress\":\"Invoice Address\",\n\t\"creditCardNumber\":\"1234567890\",\n\t\"deliveryAddress\":\"Delivery Address\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/carts/customer/987654321/checkout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carts",
+								"customer",
+								"987654321",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCartById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/carts/fd9975c8-f09f-4648-bd0b-3f49c9de8b1e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carts",
+								"fd9975c8-f09f-4648-bd0b-3f49c9de8b1e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCartItem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"productId\":\"fd9975c8-f09f-4648-bd0b-3f49c9de8b2e\",\n\t\"quantity\":3\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/carts/fd9975c8-f09f-4648-bd0b-3f49c9de8b1e/cart-items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carts",
+								"fd9975c8-f09f-4648-bd0b-3f49c9de8b1e",
+								"cart-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCartForCostumer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/carts/customer/123456789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carts",
+								"customer",
+								"123456789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCartById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/carts/fd9975c8-f09f-4648-bd0b-3f49c9de8b1e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carts",
+								"fd9975c8-f09f-4648-bd0b-3f49c9de8b1e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveCartItem",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/carts/fd9975c8-f09f-4648-bd0b-3f49c9de8b2e/cart-items/fd9975c8-f09f-4648-bd0b-3f49c9de8b2e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carts",
+								"fd9975c8-f09f-4648-bd0b-3f49c9de8b2e",
+								"cart-items",
+								"fd9975c8-f09f-4648-bd0b-3f49c9de8b2e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClearCart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/carts/fd9975c8-f09f-4648-bd0b-3f49c9de8b1e/cart-items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carts",
+								"fd9975c8-f09f-4648-bd0b-3f49c9de8b1e",
+								"cart-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCartItem",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"productId\":\"fd9975c8-f09f-4648-bd0b-3f49c9de8b2e\",\n\t\"quantity\":5\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/carts/fd9975c8-f09f-4648-bd0b-3f49c9de8b1e/cart-items/quantity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carts",
+								"fd9975c8-f09f-4648-bd0b-3f49c9de8b1e",
+								"cart-items",
+								"quantity"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "GetAllCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCustomer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"1094915733\",\n\t\"firstName\":\"Nataly\",\n\t\"lastName\":\"Reyes\",\n\t\"email\":\"hectorhuol@gmail.com\",\n\t\"countryId\":1001\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomerById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/customers/1094915733",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers",
+								"1094915733"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCustomerById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/customers/1094915733",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers",
+								"1094915733"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCreditCard",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nameOnCard\":\"Nataly\",\n\t\"cardNumber\":\"1122334455\",\n\t\"active\":true,\n\t\"expiry\":\"10/99\",\n\t\"customerId\":\"1094915733\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/customers/1094915733/credit-cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers",
+								"1094915733",
+								"credit-cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveCreditCard",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/customers/1094915733/credit-cards/1122334455",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers",
+								"1094915733",
+								"credit-cards",
+								"1122334455"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
